@@ -27,4 +27,17 @@ def charAt(string, serth_s):
 res = charAt(string, serth_s)
 print(res)
 
-
+# trim() - удалить все лишние пробелы 
+input_string = input()
+i = 0
+while input_string[i] == ' ':
+    input_string = input_string[1:]
+while input_string[len(input_string)-1] == ' ':
+    input_string = input_string[:-1]
+i = 1
+while i < len(input_string)-1:
+    if input_string[i] == ' ' and input_string[i+1] == ' ':
+        input_string = input_string[:i+1] + input_string[i+2:]
+    else:
+        i += 1
+print(input_string)
