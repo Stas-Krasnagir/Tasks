@@ -1,24 +1,33 @@
-A = [2, 1, 4, 23, 35, -10, -56, 44, 78, 9,]
-A_max = A[0]
-for element in A:
-    if element > A_max:
-        A_max = element
-print(A_max)
-A_min = A[0]
-for element in A:
-    if element < A_min:
-        A_min = element
-print(A_min)
-
-x = int(input("Find number: "))
-for i in A:
-    if i == x:
+def max_element (list):
+    max_result = list[0]
+    for element in list:
+        if element > max_result:
+            max_result = element
+    return(max_result)
+def min_element (list):
+    min_result = list[0]
+    for element in list:
+        if element < min_result:
+            min_result = element
+    return(min_result)
+def contains (list, searth_element):
+    if searth_element in list:
         print(True)
-        break
     else:
-        print(False)
-        break
-s = 0
-for o in A:
-    s += o
-    print(s)
+         print(False)
+    return
+def sum_element (list):
+    count = 0
+    for i in list:
+        count = count + i
+    return(count)
+def sort (list): 
+
+
+list = [21, 4, 23, 35, -10, 44, 78, 9]
+print(max_element(list))
+print(min_element(list))
+searth_element = int(input("Searthing element: "))
+print(contains(list,searth_element))
+print(sum_element(list))
+print(sort(list))
