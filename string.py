@@ -1,18 +1,18 @@
-def len_string (string):
+def len_string(string):
     i = 0
     while string[i:]:
         i += 1
     return i
 
-def charAt(string, serth_symbal):
+def charAt(string, char):
     count = 0
     for value in string:
-        if value ==serth_symbal:
+        if value == char:
             return count 
-        count+=1
+        count += 1
     return -1
 
-def trim (string):
+def trim(string):
     i = 0
     while string[i] == ' ':
       string = string[1:]
@@ -24,12 +24,12 @@ def trim (string):
             string = string[:i+1] + string[i+2:]
         else:
             i += 1
-    return(string)
+    return string
 
 
 string = "  Hello   World  "
 
 print(len_string(string))
-serth_symbal = str(input("Searching symbol: "))
-print(charAt(string, serth_symbal))
+char = str(input("Searching symbol: "))
+print(charAt(string, char))
 print(trim(string))

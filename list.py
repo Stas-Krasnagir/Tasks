@@ -1,26 +1,26 @@
-def max_element (list):
+def max_element(list):
     max_result = list[0]
     for element in list:
         if element > max_result:
             max_result = element
     return(max_result)
-def min_element (list):
+def min_element(list):
     min_result = list[0]
     for element in list:
         if element < min_result:
             min_result = element
-    return(min_result)
-def contains (list, searth_element):
+    return min_result 
+def contains(list, searth_element):
     if searth_element in list:
         print(True)
     else:
          print(False)
     return
-def sum_element (list):
+def sum_element(list):
     count = 0
     for i in list:
         count = count + i
-    return(count)
+    return count
 def sort (list): 
 
 
