@@ -28,14 +28,13 @@ def charAt(string, char):
 
 def trim(string):
     new_string = ""
-    for i in string:
-        f i == " ":
+    for i, ch in enumerate(string):
+        if i == " ":
             if string[i+1] != " ":
-                new_string.append(i)
-        if i != " ":
-            new_string.append(i)
+                new_string = new_string + string[i+1]
+        else:
+            new_string = new_string + string[i]
     return new_string
-
 
 string = "  Hello   World  "
 
