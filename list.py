@@ -15,11 +15,10 @@ def min_element(list):
 
 
 def contains(list, searth_element):
-    if searth_element in list:
-        print(True)
-    else:
-        print(False)
-    return
+    for i in list:
+        if i == searth_element:
+            return True
+    return False
 
 
 def sum_element(list):
